@@ -1,14 +1,15 @@
 import { useLayoutEffect, useRef, useEffect } from "react"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
-import LaserFlow from "./galaxy-canvas"
+import SmokeyBackground from './lightswind/smokey-background';
+import ShaderBackground from "./lightswind/shader-background"
 import TextPressure from "@/bits/TextPressure"
 
 gsap.registerPlugin(ScrollTrigger)
 
 export default function Hero() {
   const root = useRef(null)
-  const beamWrapRef = useRef(null)
+
 
   // Hero text animations
   useLayoutEffect(() => {
@@ -59,34 +60,16 @@ export default function Hero() {
       className=" relative min-h-screen overflow-hidden"
     >
 
-      <div
-        className="fixed inset-0 z-[1]"
-        style={{
-          backgroundImage: "url('https://images.pexels.com/photos/16052074/pexels-photo-16052074.jpeg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        }}
-    />
 
+    {/* <SmokeyBackground
+  backdropBlurAmount="lg"
+  color="#27F5D3"
+  className="rounded-xl"
+/> */}
 
+<ShaderBackground className="border border-primarylw rounded-lg" />
       {/* Beam container — NOT fixed, NOT zero-sized */}
-      <div
-        ref={beamWrapRef}
-        className="fixed inset-0 z-2 pointer-events-none"
-        style={{
-          width: "100vw",
-          height: "100vh",
-        }}
-      >
-        <LaserFlow
-          verticalSizing={2.6}
-          horizontalSizing={0.57}
-          verticalBeamOffset={-0.5}
-          fogScale={0.17}
-          fogIntensity={1.1}
-        />
-      </div>
+
 
       {/* Foreground content */}
       <div className="relative z-10 max-w-6xl mx-auto px-4 py-24 md:py-56 ">

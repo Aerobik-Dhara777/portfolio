@@ -74,8 +74,46 @@ body::-webkit-scrollbar {
   font-display: swap;
 }
 
-@import "tailwindcss";
+@font-face {
+  font-family: rostex;
+  src: url("../public/fonts/Rostex-Oblique.otf");
+  font-display: swap;
 
+
+}
+
+@font-face {
+  font-family: true-mate;
+  src: url("../public/fonts/True\ Mate.otf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: milker;
+  src: url("../public/fonts/Milker.otf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: r;
+  src: url("../public/fonts/RUSTY\ ATTACK\ DEMO\ Regular.otf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: amro;
+  src: url("../public/fonts/Amanojaku\ Demo.otf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: simbiot;
+  src: url("../public/fonts/Simbiot.ttf");
+  font-display: swap;
+}
+
+@import 'tailwindcss';
+@plugin 'lightswind/plugin';
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
@@ -88,6 +126,19 @@ body::-webkit-scrollbar {
     .your-element::-webkit-scrollbar {
       display: none; /* Hides the scrollbar visually */
     }
+.numbers{
+  font-family: milker;
+  /* font-weight: 800; */
+  font-size:7.7em;
+  
+}
+
+.pre-welcome{
+  font-weight: 800;
+  font-size: 2rem;
+
+}
+
 .counter-loader {
   font-family:jump;
   font-size:3.7rem;
@@ -151,7 +202,7 @@ body::-webkit-scrollbar {
 
 .about-title{
   font-family:Kugli;
-  color: #7be4d7;
+  color: #5affbd;
 }
 
 .about-para{

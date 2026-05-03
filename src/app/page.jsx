@@ -7,6 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { TextPlugin } from "gsap/TextPlugin";
 
 // import Loader from "../components/Loader";
+import Preloader from "../components/Preloader";
 import FuturisticCursor from "../components/FuturisticCursor";
 import Hero from "../components/hero";
 import AboutSection from "../components/AboutSection";
@@ -21,30 +22,11 @@ gsap.registerPlugin(ScrambleTextPlugin, ScrollTrigger, TextPlugin);
 
 export default function Page() {
   const [loading, setLoading] = useState(true);
-  const videoRef = useRef(null);
   const nameRef = useRef(null);
   const scrambleRef = useRef(null);
   const headerRef = useRef(null);
 
 
-  useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 0); // loader 4s
-    return () => clearTimeout(timer);
-  }, []);
-
-  // slow contact video playback by setting playbackRate after video can play
-  useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
-
-    const handleCanPlay = () => {
-      video.playbackRate = 0.3;
-      // Optional debug: console.log("Playback rate set to", video.playbackRate);
-    };
-
-    video.addEventListener("canplay", handleCanPlay);
-    return () => video.removeEventListener("canplay", handleCanPlay);
-  }, []);
 
   // scramble animation: only run after loader finishes
   useEffect(() => {
@@ -58,7 +40,7 @@ export default function Page() {
         scrambleText: {
           text: "Soumadip Dhara",
           chars: "0X#",
-          speed: 0.77,
+          speed: 1.07,
           
         },
         duration: 3,
@@ -100,8 +82,10 @@ export default function Page() {
   // }
 
   return (
+  <>
+    {loading && <Preloader onComplete={() => setLoading(false)} />}
+
     <SmoothScrollProvider>
-      
       <main
         style={{
           "--brand": "#00F5FF",
@@ -109,11 +93,9 @@ export default function Page() {
           "--bg": "#101828",
           "--muted": "#10151B",
           "--fg": "#E6F1FF",
-         
         }}
         className="relative min-h-screen bg-[var(--bg)] text-[var(--fg)] font-sans antialiased overflow-hidden"
-        id="main-content" 
-       
+        id="main-content"
       >
        
         <FuturisticCursor />
@@ -182,5 +164,6 @@ export default function Page() {
       </main>
       
     </SmoothScrollProvider>
+  </>
   );
 }

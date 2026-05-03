@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react"
 import { gsap } from "gsap"
-import SplashCursor from "../bits/SplashCursor"
+// import SplashCursor from "../bits/SplashCursor"
 
 
 
@@ -83,7 +83,7 @@ export default function FuturisticCursor() {
 
   return (
     <>
-    <SplashCursor />
+    {/* <SplashCursor /> */}
       {/* Ring (glowing, smooth trailing) */}
       <div
         ref={ringRef}

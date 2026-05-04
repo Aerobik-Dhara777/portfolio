@@ -18,7 +18,7 @@ export default function Header() {
   };
 
   useLayoutEffect(() => {
-    gsap.set(menuRef.current, { yPercent: -100, pointerEvents: "none" });
+    gsap.set(menuRef.current, { yPercent: -120, pointerEvents: "none" });
     gsap.set([...linksRef.current, buttonRef.current], {
       y: 57,
       opacity: 0,

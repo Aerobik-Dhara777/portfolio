@@ -89,7 +89,7 @@ const blurClassMap: Record<BlurSize, string> = {
  */
 function ShaderBackground({
   backdropBlurAmount = "sm",
-  color = "#07eae6ff", // Default purple color
+  color = "#4DFFBEff", // Default purple color
   className = "",
 }: ShaderBackgroundProps): JSX.Element {
   const canvasRef = useRef<HTMLCanvasElement>(null);

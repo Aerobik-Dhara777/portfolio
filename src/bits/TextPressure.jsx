@@ -27,6 +27,7 @@ const TextPressure = ({
   text = 'Compressa',
   fontFamily = 'Compressa VF',
   fontUrl = 'https://res.cloudinary.com/dr6lvwubh/raw/upload/v1529908256/CompressaPRO-GX.woff2',
+  
 
   width = true,
   weight = true,

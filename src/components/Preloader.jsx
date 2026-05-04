@@ -135,17 +135,17 @@ useEffect(() => {
       <div className="progress-bar absolute bottom-0 right-0 w-[17px] md:w-[17px] h-0 bg-[#5affbd] z-10" />
 
       {/* Pre Welcome */}
-        <div className="pre-welcome absolute top-[45%] left-[10%] md:left-[20%]">
+        <div className="pre-welcome absolute top-[37%] left-[10%] md:left-[20%]">
 
         <div className="line overflow-hidden my-3 h-[70px] md:h-[90px]">
-            <p className="translate-y-[107%] text-[#5affbd] text-[48px] md:text-[64px] font-bold leading-[70px] md:leading-[90px]">
-            স্বাগতম
+            <p className="translate-y-[107%] text-[#4DFFBE] text-[48px] md:text-[64px] font-bold leading-[70px] md:leading-[90px]">
+           • স্বাগতম
             </p>
         </div>
 
-        <div className="line overflow-hidden my-3 h-[50px] md:h-[70px]">
-            <p className="translate-y-[120%] text-[#fff] text-[28px] md:text-[40px] font-bold leading-[50px] md:leading-[70px]">
-            Welcome
+        <div className="line overflow-hidden my-3 h-[70px] md:h-[90px]">
+            <p className="translate-y-[120%] text-[#fff] text-[48px] md:text-[64px] font-bold leading-[70px] md:leading-[90px]">
+          • Welcome
             </p>
         </div>
 
@@ -157,7 +157,7 @@ useEffect(() => {
 
   <div className="number number-1 h-full overflow-hidden">
     <div className="number-wrap translate-y-full flex flex-col">
-      <span className="text-[90px] md:text-[140px] font-bold h-[120px] md:h-[180px] leading-[120px] md:leading-[180px] text-[#5affbd]">
+      <span className="text-[90px] md:text-[140px] font-bold h-[120px] md:h-[180px] leading-[120px] md:leading-[180px] text-[#4DFFBE]">
         1
       </span>
     </div>
@@ -169,7 +169,7 @@ useEffect(() => {
         {[1,2,3,4,5,6,7,8,9,0].map((n) => (
           <span
             key={n}
-            className="text-[90px] md:text-[140px] font-bold h-[120px] md:h-[180px] leading-[120px] md:leading-[180px] text-[#5affbd]"
+            className="text-[90px] md:text-[140px] font-bold h-[120px] md:h-[180px] leading-[120px] md:leading-[180px] text-[#4DFFBE]"
           >
             {n}
           </span>

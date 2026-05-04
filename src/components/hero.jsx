@@ -1,7 +1,7 @@
 import { useLayoutEffect, useRef, useEffect } from "react"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
-import SmokeyBackground from './lightswind/smokey-background';
+
 import ShaderBackground from "./lightswind/shader-background"
 import TextPressure from "@/bits/TextPressure"
 
@@ -18,8 +18,8 @@ export default function Hero() {
 
       tl.fromTo(
         ".hero-title",
-        { y: -70, opacity: 0, filter: "blur(57px)",delay:0.27 },
-        { y: 0, opacity: 1, filter: "blur(0px)", duration: 1.57, ease: "power3.out", scrub:1.7 }
+        { y: -137, opacity: 0, filter: "blur(57px)",delay:0.27 },
+        { y: 0, opacity: 1, filter: "blur(0px)", duration: 2.57, ease: "power3.out", scrub:1.7 }
       )
         .fromTo(
           ".hero-sub",
@@ -61,13 +61,7 @@ export default function Hero() {
     >
 
 
-    {/* <SmokeyBackground
-  backdropBlurAmount="lg"
-  color="#27F5D3"
-  className="rounded-xl"
-/> */}
-
-<ShaderBackground className="border border-primarylw rounded-lg" />
+<ShaderBackground className="border border-[#4DFFBE] fixed z-0 inset-0 pointer-events-none bg-[#fff]" />
       {/* Beam container — NOT fixed, NOT zero-sized */}
 
 
@@ -75,9 +69,9 @@ export default function Hero() {
       <div className="relative z-10 max-w-6xl mx-auto px-4 py-24 md:py-56 ">
         <p
           className="mb-4 text-sm tracking-widest uppercase hero-p"
-          style={{ color: "beige" }}
+          
         >
-          Full Stack Web Developer 
+          Full Stack AI Developer 
         </p>
 
         <h1
@@ -95,7 +89,7 @@ export default function Hero() {
                 italic={true}
                 textColor="#ffffff"
                 strokeColor="#a351d4"
-                minFontSize={36}
+                minFontSize={57}
               />
             </div>
         </h1>

@@ -78,7 +78,7 @@ export default function Page() {
 
   return (
   <>
-    {/* {loading && <Preloader onComplete={() => setLoading(false)} />} */}
+    {loading && <Preloader onComplete={() => setLoading(false)} />}
 
     <SmoothScrollProvider>
       <main

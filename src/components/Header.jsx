@@ -103,10 +103,10 @@ export default function Header() {
         menuRef.current,
         {
           y: "-150vh",
-          duration: 0.97,
+          duration: 3.57,
           ease: "power4.inOut",
         },
-        "-=0.77"
+        "-=1.77"
       );
 
     setOpen(false);

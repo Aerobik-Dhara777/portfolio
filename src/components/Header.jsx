@@ -18,7 +18,7 @@ export default function Header() {
   };
 
   useLayoutEffect(() => {
-    gsap.set(menuRef.current, { yPercent: -120, pointerEvents: "none" });
+    gsap.set(menuRef.current, { y: "-150vh", pointerEvents: "none" });
     gsap.set([...linksRef.current, buttonRef.current], {
       y: 57,
       opacity: 0,
@@ -43,7 +43,7 @@ export default function Header() {
     });
 
     tl.to(menuRef.current, {
-      yPercent: 0,
+      y: 0,
       duration: 2.17,
       ease: "power3.inOut",
     })
@@ -102,7 +102,7 @@ export default function Header() {
       .to(
         menuRef.current,
         {
-          yPercent: -100,
+          y: "-150vh",
           duration: 0.97,
           ease: "power4.inOut",
         },

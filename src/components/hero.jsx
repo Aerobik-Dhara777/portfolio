@@ -7,36 +7,45 @@ import TextPressure from "@/bits/TextPressure"
 
 gsap.registerPlugin(ScrollTrigger)
 
-export default function Hero() {
+export default function Hero({ startAnimation }) {
   const root = useRef(null)
 
 
   // Hero text animations
   useLayoutEffect(() => {
+      if (!startAnimation) return;
     const ctx = gsap.context(() => {
       const tl = gsap.timeline()
 
-      tl.fromTo(
-        ".hero-title",
-        { y: -137, opacity: 0, filter: "blur(57px)",delay:0.27 },
-        { y: 0, opacity: 1, filter: "blur(0px)", duration: 2.57, ease: "power3.out", scrub:1.7 }
-      )
-        .fromTo(
+      // tl.fromTo(
+      //   ".hero-title",
+      //   { y: -137, opacity: 0, filter: "blur(57px)",delay:0.01 },
+      //   { y: 0, opacity: 1, filter: "blur(0px)", duration: 2.57, ease: "power3.out", scrub:1.7 }
+      // )
+      tl.to(".hero-title", {
+        y: 0,
+        opacity: 1,
+        filter: "blur(0px)",
+        duration: 2.57,
+        ease: "power3.out",
+        scrub:1.7
+      })
+        .to(
           ".hero-sub",
-          { y: 20, opacity: 0 },
+          // { y: 20, opacity: 0 },
           { y: 0, opacity: 1, duration: 0.97, ease: "back.inout(5.7)" },
           "-=0.4"
         )
-        .fromTo(
+        .to(
           ".hero-cta",
-          { scale: 0.9, opacity: 0 },
+          // { scale: 0.9, opacity: 0 },
           { scale: 1, opacity: 1, duration: 0.7, ease: "back.out(5.7)" },
           "-=0.3"
         )
     }, root)
 
     return () => ctx.revert()
-  }, [])
+  }, [startAnimation])
 
   
   // 🔑 FORCE CANVAS RESIZE AFTER LAYOUT
@@ -76,7 +85,7 @@ export default function Hero() {
 
         <h1
           className="hero-title text-4xl md:text-6xl font-semibold leading-tight text-balance"
-          style={{ color: "#F5EFE6" }}
+          style={{ color: "#F5EFE6" , transform: "translateY(-137px)", opacity: 0, filter: "blur(57px)"}}
         >
           <div style={{position: 'relative', height: '200px' ,background:''}}>
               <TextPressure
@@ -96,14 +105,14 @@ export default function Hero() {
 
         <p
           className="hero-sub mt-4 max-w-2xl opacity-90 "
-          style={{ color: "beige" }}
+          style={{ color: "beige" , transform: "translateY(20px)", opacity: 0 }}
         >
           Crafting futuristic experiences with React, Node.js, and 3D motion. I
           merge performance, accessibility, and striking visuals into seamless
           products.
         </p>
 
-        <div className="hero-cta mt-8 flex items-center gap-4  ">
+        <div className="hero-cta mt-8 flex items-center gap-4  " style={{ transform: "scale(0.9)", opacity: 0 }}>
           <a
             href="#projects"
             className="px-5 py-3 rounded-md"

@@ -101,7 +101,7 @@ export default function Page() {
         <Header/>
 
         {/* Hero */}
-        <Hero />
+        <Hero startAnimation={!loading} />
 
         {/* Sections */}
         <AboutSection />

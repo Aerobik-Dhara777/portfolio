@@ -139,7 +139,7 @@ export default function AboutSection() {
             style={{position:"absolute"}}
           /> */}
 
-          <img src="./MAHH-IMG.JPG" alt="" className="rounded-[37px] "/>
+          <img src="./image.png" alt="" className="rounded-[37px] "/>
         </div>
       </div>
     </section>

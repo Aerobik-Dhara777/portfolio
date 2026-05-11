@@ -3,7 +3,7 @@ import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 
 import ShaderBackground from "./lightswind/shader-background"
-import TextPressure from "@/bits/TextPressure"
+import TextPressure from "../bits/TextPressure"
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -70,7 +70,7 @@ export default function Hero({ startAnimation }) {
     >
 
 
-<ShaderBackground className="border border-[#4DFFBE] fixed z-0 inset-0 pointer-events-none bg-[#fff]" />
+<ShaderBackground className="border border-[#4DFFBE] fixed z-5 inset-0 pointer-events-none bg-[#fff]" />
       {/* Beam container — NOT fixed, NOT zero-sized */}
 
 
@@ -107,12 +107,9 @@ export default function Hero({ startAnimation }) {
           className="hero-sub mt-4 max-w-2xl opacity-90 "
           style={{ color: "beige" , transform: "translateY(20px)", opacity: 0 }}
         >
-          Crafting futuristic experiences with React, Node.js, and 3D motion. I
-          merge performance, accessibility, and striking visuals into seamless
-          products.
-        </p>
+Architecting intelligent systems by merging high-performance AI with 3D motion. Fusing machine learning into responsive, futuristic web architectures.</p>
 
-        <div className="hero-cta mt-8 flex items-center gap-4  " style={{ transform: "scale(0.9)", opacity: 0 }}>
+        {/* <div className="hero-cta mt-8 flex items-center gap-4  " style={{ transform: "scale(0.9)", opacity: 0 }}>
           <a
             href="#projects"
             className="px-5 py-3 rounded-md"
@@ -136,7 +133,7 @@ export default function Hero({ startAnimation }) {
           >
             My Journey
           </a>
-        </div>
+        </div> */}
       </div>
     </section>
   )

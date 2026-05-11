@@ -112,6 +112,36 @@ body::-webkit-scrollbar {
   font-display: swap;
 }
 
+@font-face {
+  font-family: GBold;
+  src: url("../public/fonts/Gilroy-Bold.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: GHeavy;
+  src: url("../public/fonts/Gilroy-Heavy.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: GLight;
+  src: url("../public/fonts/Gilroy-Light.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: GMedium;
+  src: url("../public/fonts/Gilroy-Medium.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: GReg;
+  src: url("../public/fonts/Gilroy-Regular.ttf");
+  font-display: swap;
+}
+
 @import 'tailwindcss';
 @plugin 'lightswind/plugin';
 @import "tw-animate-css";
@@ -174,14 +204,14 @@ body::-webkit-scrollbar {
 }
 
 .hero-p{
-  font-family:Kugli;
+  font-family:GBold;
   font-size: 2rem;
-  font-weight: 900;
+  font-weight: 700;
   
 }
 
 .hero-sub{
-  font-family:Kugli;
+  font-family:GBold;
   font-weight:700;
 
 }
@@ -226,12 +256,15 @@ body::-webkit-scrollbar {
 }
 
 .about-title{
-  font-family:Kugli;
+  font-family:GBold;
   color: #4DFFBE;
+  /* font-size: 5.7rem; */
+  
 }
 
 .about-para{
-  font-family:Quill;
+  font-family:GBold;
+
 
 }
 

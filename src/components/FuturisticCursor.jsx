@@ -19,8 +19,8 @@ export default function FuturisticCursor() {
 
     if (!dotEl || !ringEl) return
 
-    const fadeIn = () => gsap.to([dotEl, ringEl], { opacity: 1, duration: 0.3, ease: "power3.out" })
-    const fadeOut = () => gsap.to([dotEl, ringEl], { opacity: 0, duration: 0.5, ease: "power3.out" })
+    const fadeIn = () => gsap.to([dotEl, ringEl], { opacity: 1, duration: 3.7, ease: "power3.out" })
+    const fadeOut = () => gsap.to([dotEl, ringEl], { opacity: 0, duration: 5.5, ease: "power3.out" })
 
     const resetIdle = () => {
       fadeIn()
@@ -34,18 +34,18 @@ export default function FuturisticCursor() {
       resetIdle()
     }
 
-    const onMouseDown = () => gsap.to([dotEl, ringEl], { scale: 0.8, duration: 0.2, ease: "power3.out" })
-    const onMouseUp = () => gsap.to([dotEl, ringEl], { scale: 1, duration: 0.3, ease: "power3.out" })
+    const onMouseDown = () => gsap.to([dotEl, ringEl], { scale: 0.8, duration: 3.2, ease: "power3.out" })
+    const onMouseUp = () => gsap.to([dotEl, ringEl], { scale: 1, duration: 3.3, ease: "power3.out" })
 
     const onHoverIn = (e) => {
       const el = e.target
       if (el.tagName === "A" || el.tagName === "BUTTON" || el.classList.contains("cursor-hover")) {
-        gsap.to(ringEl, { scale: 1.5, borderColor: "#00fff5", duration: 0.3, ease: "power3.out" })
+        gsap.to(ringEl, { scale: 1.77, borderColor: "#00fff5", duration: 0.37, ease: "power3.out" })
       }
     }
 
     const onHoverOut = () => {
-      gsap.to(ringEl, { scale: 1, borderColor: "rgba(0,255,255,0.6)", duration: 0.3, ease: "power3.out" })
+      gsap.to(ringEl, { scale: 1, borderColor: "rgba(0,255,255,0.6)", duration: 0.37, ease: "power3.out" })
     }
 
     // Smooth animation loop
@@ -87,14 +87,14 @@ export default function FuturisticCursor() {
       {/* Ring (glowing, smooth trailing) */}
       <div
         ref={ringRef}
-        className="fixed w-8 h-8 border border-cyan-400/60 rounded-full pointer-events-none z-[9999]
+        className="fixed w-8 h-8 border border-[#4DFFBE/60] rounded-full pointer-events-none z-[9999]
                    shadow-[0_0_15px_#00fff580] backdrop-blur-[3px] translate-x-[-50%] translate-y-[-50%] opacity-100"
       />
 
       {/* Dot (precise, fast) */}
       <div
         ref={dotRef}
-        className="fixed w-2.5 h-2.5 bg-cyan-300 rounded-full pointer-events-none z-[10000]
+        className="fixed w-2.5 h-2.5 bg-[#4DFFBE] rounded-full pointer-events-none z-[10000]
                    shadow-[0_0_6px_#00fff580] translate-x-[-50%] translate-y-[-50%] opacity-100"
       />
     </>

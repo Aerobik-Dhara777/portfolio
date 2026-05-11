@@ -1,7 +1,6 @@
 "use client";
 import { useRef, useState, useLayoutEffect } from "react";
 import gsap from "gsap";
-import Button from "./Button";
 import RollingText from "./RollingText";
 
 export default function Header() {

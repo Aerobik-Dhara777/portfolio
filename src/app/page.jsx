@@ -8,10 +8,11 @@ import { TextPlugin } from "gsap/TextPlugin";
 
 
 import Preloader from "../components/Preloader";
-import Header from "@/components/Header";
+import Header from "../components/Header";
 import FuturisticCursor from "../components/FuturisticCursor";
 import Hero from "../components/hero";
 import AboutSection from "../components/AboutSection";
+import Quote from "../components/Quote";
 import ProjectsSection from "../components/ProjectsSection";
 import Journey from "../components/journey";
 import Contact from "../components/Contact";
@@ -104,14 +105,16 @@ export default function Page() {
         <Hero startAnimation={!loading} />
 
         {/* Sections */}
+        <Quote/>
         <AboutSection />
-        <ProjectsSection />
+        
+        {/* <ProjectsSection /> */}
         <Journey />
 
-        {/* Contact */}
+        Contact
         <Contact />
         
-        {/* Footer */}
+        Footer
         <footer
           className="py-8 text-center text-sm opacity-70"
           style={{ borderTop: "1px solid rgba(230,241,255,0.1)" }}
